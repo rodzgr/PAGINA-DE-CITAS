@@ -1,0 +1,105 @@
+/* src/Styles/Carrusel.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Ocupa el 90% de la altura de la pantalla */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel__slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+  }
+  
+  .carousel__legend {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+  }
+  
+  .carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .carousel__button--left {
+    left: 10px;
+  }
+  
+  .carousel__button--right {
+    right: 10px;
+  }
+  
+  .carousel__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+  }
+  
+  .carousel__form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carousel__form label {
+    margin-bottom: 10px;
+  }
+  
+  .carousel__form input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .carousel__form button {
+    padding: 10px;
+    background-color: #ff0d0d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .carousel__form button:hover {
+    background-color: #97126b;
+  }
+  

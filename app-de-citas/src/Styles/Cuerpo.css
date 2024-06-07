@@ -1,0 +1,40 @@
+/* src/Styles/Cuerpo.css */
+.cuerpo {
+    padding-top: 6%;
+    width: 100%;
+  }
+  
+  /* src/Styles/Cuerpo.css */
+.cuerpo img {
+    max-width: 600%; /* Establece el ancho máximo de la imagen al ancho del contenedor */
+    max-height: 800px; /* Establece la altura máxima de la imagen */
+    object-fit: contain; /* Escala la imagen manteniendo su relación de aspecto */
+  }
+  .contenido {
+    text-align: center;
+   
+    padding-left: 20px; /* Ajusta el espaciado a la izquierda */
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Una columna de ancho igual */
+    grid-template-rows: repeat(auto); /* Tres filas de altura automática */
+  }
+  
+  /* src/Styles/Cuerpo.css */
+.texto {
+    margin-top: 20px; /* Ajusta el espaciado entre la imagen y el texto */
+    padding: 1px; /* Añade relleno alrededor del texto */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 10px; /* Bordess redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .texto h2 {
+    margin-bottom: 10px;
+  }
+  
+  .texto p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  

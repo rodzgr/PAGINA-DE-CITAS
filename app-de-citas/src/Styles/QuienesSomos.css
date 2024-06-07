@@ -1,0 +1,27 @@
+/* src/Styles/QuienesSomos.css */
+
+.quienes-somos {
+    padding-top: 6%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Una columna de ancho igual */
+    grid-template-rows: repeat(auto); /* Tres filas de altura automática */
+    gap: 20px; /* Espacio entre filas y columnas */
+  }
+  
+  .quienes-somos div {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quienes-somos h2 {
+    margin-bottom: 10px;
+  }
+  
+  .quienes-somos p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
