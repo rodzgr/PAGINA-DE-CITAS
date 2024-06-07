@@ -1,4 +1,3 @@
-// src/Carrusel.js
 import React, { useState } from 'react';
 import '../Styles/Carrusel.css';
 
@@ -9,46 +8,80 @@ const Carrusel = () => {
     { src: 'https://via.placeholder.com/600x400', alt: 'Imagen 3', legend: 'Leyenda 3' },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [userData, setUserData] = useState({
+    name: '',
+    gender: '',
+    email: '',
+    password: ''
+  });
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const [isRegistering, setIsRegistering] = useState(true);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserData({ ...userData, [name]: value });
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  const handleRegisterSubmit = (event) => {
+    event.preventDefault();
+    console.log('Datos del usuario:', userData);
+    // Aquí podrías enviar los datos del usuario a un servidor
+    // y luego realizar alguna acción, como registrar al usuario
+    setIsRegistering(false);
+  };
+
+  const handleLoginSubmit = (event) => {
+    event.preventDefault();
+    console.log('Datos del usuario:', userData);
+    // Aquí podrías enviar los datos del usuario a un servidor
+    // y luego realizar alguna acción, como iniciar sesión
+    // Redireccionar a otra página después de iniciar sesión
+    window.location.href = '/otra-pagina'; // Cambia '/otra-pagina' por la ruta de la página a la que deseas redirigir
   };
 
   return (
     <div className="carousel">
-      <button className="carousel__button carousel__button--left" onClick={prevSlide}>
-        &#10094;
-      </button>
       <div className="carousel__slide">
-        <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+        <img src={images[0].src} alt={images[0].alt} />
         <div className="carousel__form">
-          <form>
-            <h2>Regístrate</h2>
-            <label>
-              Nombre:
-              <input type="text" name="name" />
-            </label>
-            <label>
-              Correo:
-              <input type="email" name="email" />
-            </label>
-            <label>
-              Contraseña:
-              <input type="password" name="password" />
-            </label>
-            <button type="submit">Registrarse</button>
-          </form>
+          {isRegistering ? (
+            <form onSubmit={handleRegisterSubmit}>
+              <h2>Regístrate</h2>
+              <label>
+                Nombre:
+                <input type="text" name="name" value={userData.name} onChange={handleInputChange} />
+              </label>
+              <label>
+                Sexo:
+                <input type="text" name="gender" value={userData.gender} onChange={handleInputChange} />
+              </label>
+              <label>
+                Correo:
+                <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
+              </label>
+              <label>
+                Contraseña:
+                <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
+              </label>
+              <button type="submit">Registrarme</button>
+            </form>
+          ) : (
+            <form onSubmit={handleLoginSubmit}>
+              <h2>Iniciar sesión</h2>
+              <label>
+                Correo:
+                <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
+              </label>
+              <label>
+                Contraseña:
+                <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
+              </label>
+              <button type="submit">Ingresar</button>
+            </form>
+          )}
         </div>
-        <p className="carousel__legend">{images[currentIndex].legend}</p>
+        <p className="carousel__legend">{images[0].legend}</p>
       </div>
-      <button className="carousel__button carousel__button--right" onClick={nextSlide}>
-        &#10095;
-      </button>
     </div>
   );
 };

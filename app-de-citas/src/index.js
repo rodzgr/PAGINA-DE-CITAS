@@ -7,6 +7,7 @@ import Header from "./Componentes/Header"
 import Carrusel from './Componentes/Carrusel';
 import QuienesSomos from './Componentes/QuienesSomos.js';
 import Cuerpo from './Componentes/Cuerpo.js';
+import Perfiles from './Componentes/Perfiles.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +18,7 @@ root.render(
     <Carrusel />
     <QuienesSomos/>
     <Cuerpo/>
-
+    <Perfiles/>
 
   </React.StrictMode>
 );

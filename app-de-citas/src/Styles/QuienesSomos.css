@@ -1,6 +1,7 @@
 /* src/Styles/QuienesSomos.css */
 
 .quienes-somos {
+  background-color: #ff6f61;
     padding-top: 6%;
     text-align: center;
     display: grid;
@@ -10,17 +11,20 @@
   }
   
   .quienes-somos div {
+    background-color: #ff6f61;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #ff6f61;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .quienes-somos h2 {
+    background-color: #ff6f61;
     margin-bottom: 10px;
   }
   
   .quienes-somos p {
+    background-color: #ff6f61;
     font-size: 16px;
     line-height: 1.5;
   }

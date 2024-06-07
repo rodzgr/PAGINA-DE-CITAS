@@ -1,31 +1,36 @@
 /* src/Styles/Cuerpo.css */
 .cuerpo {
+  background-color: #ff6f61;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente los elementos */
     padding-top: 6%;
     width: 100%;
   }
   
-  /* src/Styles/Cuerpo.css */
-.cuerpo img {
-    max-width: 600%; /* Establece el ancho máximo de la imagen al ancho del contenedor */
-    max-height: 800px; /* Establece la altura máxima de la imagen */
-    object-fit: contain; /* Escala la imagen manteniendo su relación de aspecto */
-  }
-  .contenido {
-    text-align: center;
-   
-    padding-left: 20px; /* Ajusta el espaciado a la izquierda */
-    display: grid;
-    grid-template-columns: repeat(2, auto); /* Una columna de ancho igual */
-    grid-template-rows: repeat(auto); /* Tres filas de altura automática */
+  .imagen {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo de la imagen */
+    background-color: #ff6f61;
   }
   
-  /* src/Styles/Cuerpo.css */
-.texto {
+  .imagen img {
+    width: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+    max-height: 400px; /* Ajusta la altura máxima de la imagen */
+    object-fit: contain; /* Escala la imagen manteniendo su relación de aspecto */
+  }
+  
+  .texto {
+    background-color: #ff6f61;
     margin-top: 20px; /* Ajusta el espaciado entre la imagen y el texto */
-    padding: 1px; /* Añade relleno alrededor del texto */
+    padding: 10px; /* Ajusta el relleno alrededor del texto */
     background-color: #f9f9f9; /* Color de fondo */
     border-radius: 10px; /* Bordess redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo del texto */
+    text-align: center; /* Centra el texto horizontalmente */
   }
   
   .texto h2 {
@@ -33,8 +38,7 @@
   }
   
   .texto p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 14px; /* Reduce el tamaño de la fuente del texto */
+    line-height: 1.3; /* Reduce el espacio entre líneas del texto */
   }
-  
   

@@ -1,0 +1,56 @@
+/* src/Componentes/Perfiles.css */
+
+/* Estilos para el contenedor de perfiles */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilos para la tarjeta de perfil */
+.perfiles-card {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px; /* Ancho fijo para la tarjeta */
+  height: 550px; /* Altura fija para la tarjeta */
+  margin: 0 auto;
+}
+
+/* Estilos para la imagen del perfil */
+.profile-photo {
+  width: 100%;
+  height: 70%; /* Altura fija para la imagen dentro de la tarjeta */
+  object-fit: cover; /* Escalar la imagen para llenar el contenedor */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los textos de detalles */
+.profile-details {
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-bottom: 20px; /* Espacio entre la imagen y los detalles */
+}
+
+/* Estilos para los botones de acción */
+.profile-actions {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+}
+
+.like-button,
+.dislike-button {
+  border: none;
+  background: none;
+  font-size: 36px; /* Tamaño del icono */
+  color: white; /* Color del icono */
+  cursor: pointer;
+}
